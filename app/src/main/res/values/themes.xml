@@ -7,8 +7,12 @@
 
     <style name="Theme.Material_Lab3_LaunchScreen" parent="Base.Theme.Material_Lab3_LaunchScreen" />
 
-    <style name="Theme.Material_Lab3_LaunchScreen.SplashScreen" parent="Theme.SplashScreen">
+    <style name="Theme.Material_Lab3_LaunchScreen.SplashScreen" parent="Theme.Material_Lab3_LaunchScreen">
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.Material_Lab3_LaunchScreen</item>
+    </style>
+
+    <style name="Theme.Material_Lab3_LaunchScreen.Bg" parent="Theme.Material_Lab3_LaunchScreen">
+        <item name="background">@drawable/splash</item>
     </style>
 </resources>
