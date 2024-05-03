@@ -5,7 +5,9 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Material_Lab3_LaunchScreen" parent="Base.Theme.Material_Lab3_LaunchScreen" />
+    <style name="Theme.Material_Lab3_LaunchScreen" parent="Base.Theme.Material_Lab3_LaunchScreen">
+        <item name="colorPrimary">@color/textBlue</item>
+    </style>
 
     <style name="Theme.Material_Lab3_LaunchScreen.SplashScreen" parent="Theme.Material_Lab3_LaunchScreen">
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash</item>
@@ -15,4 +17,44 @@
     <style name="Theme.Material_Lab3_LaunchScreen.Bg" parent="Theme.Material_Lab3_LaunchScreen">
         <item name="background">@drawable/splash</item>
     </style>
+
+    <style name="customOutlinedBox" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@drawable/outlined_color_selector</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="colorPrimary">@color/textBlue</item>
+        <item name="android:textColorHint">@color/textBlue</item>
+    </style>
+
+    <style name="customOutlinedButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/lightWhite</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="customOutlinedButton.Blue" parent="customOutlinedButton">
+        <item name="strokeColor">@color/textBlue</item>
+        <item name="android:textColor">@color/textBlue</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingEnd">30dp</item>
+    </style>
+
+    <style name="customUnderlinedBox" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="backgroundTint">@color/lightBackgroundBlue</item>
+        <item name="boxBackgroundColor">@color/lightBackgroundBlue</item>
+        <item name="boxStrokeColor">@drawable/outlined_color_selector</item>
+        <item name="android:textColorHint">@color/textBlue</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconDrawable">@drawable/ic_settings</item>
+    </style>
+
 </resources>

@@ -1,11 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/splash"
     tools:context=".RegistrationActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/centerGuideLine1"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.58"
+      app:layout_constraintGuide_begin="1dp"/>
+
+
+  <ImageView
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="30dp"
+      android:src="@drawable/video_calling"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/NameRegistrationTB"
+      style="@style/customOutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="60dp"
+      android:layout_marginEnd="60dp"
+      android:layout_marginBottom="1dp"
+      android:hint="Name"
+      app:layout_constraintBottom_toTopOf="@id/EmailRegistrationTBRegWin">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TIEDnameReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/EmailRegistrationTBRegWin"
+      style="@style/customOutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="60dp"
+      android:layout_marginEnd="60dp"
+      android:layout_marginBottom="5dp"
+      android:hint="Email"
+      app:layout_constraintBottom_toTopOf="@id/centerGuideLine1">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TIEDemailReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/PasswordRegistrationTBRegWin"
+      style="@style/customOutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="60dp"
+      android:layout_marginEnd="60dp"
+      android:layout_marginTop="5dp"
+      android:hint="Password"
+      app:layout_constraintTop_toBottomOf="@id/centerGuideLine1">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TIEDpasswordReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPassword" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/ConfirmPasswordTB"
+      style="@style/customOutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="60dp"
+      android:layout_marginEnd="60dp"
+      android:layout_marginTop="5dp"
+      android:hint="ConfirmPassword"
+      app:layout_constraintTop_toBottomOf="@id/PasswordRegistrationTBRegWin">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/TIEDpasswordRepeatReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPassword" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+      android:id="@+id/SingUpButtonRegister"
+      style="@style/customOutlinedButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="15dp"
+      android:text="Sign Up"
+      app:layout_constraintBottom_toTopOf="@id/cancel_button"
+      app:layout_constraintEnd_toEndOf="@id/cancel_button" />
+
+  <Button
+      android:id="@+id/cancel_button"
+      style="@style/customOutlinedButton"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:text="Cancel"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/SingUpButtonRegister" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

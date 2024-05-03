@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textBlue">#1C56FF</color>
     <color name="halfTransparentGrey">#80A3A3A3</color>
+    <color name="transparent">#00000000</color>
+    <color name="lightWhite">#99FFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="outlineBlue">#CC2EFAF3</color>
+    <color name="lightBackgroundBlue">#806CD7E4</color>
 </resources>

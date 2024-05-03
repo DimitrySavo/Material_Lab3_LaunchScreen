@@ -26,11 +26,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:hint="Email"
-        app:boxStrokeWidth="3dp"
-        app:boxStrokeColor="@color/textBlue"
-        android:textColorHint="@color/textBlue"
-        app:cursorColor="@color/textBlue">
+        style="@style/customOutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIEDemailMain"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -44,12 +42,10 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:hint="Password"
-        app:boxStrokeWidth="3dp"
-        app:boxStrokeColor="@color/textBlue"
-        android:textColorHint="@color/textBlue"
-        app:cursorColor="@color/textBlue">
+        style="@style/customOutlinedBox"
+        android:hint="Password">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TIEDpasswordMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"/>
@@ -63,10 +59,27 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="5dp"
         android:src="@drawable/google_icon"
-        android:background="@drawable/image_button_shape"
-        />
+        android:background="@drawable/image_button_shape" />
 
     <Button
+        android:id="@+id/SingInButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/SingUpButton"
+        app:layout_constraintStart_toStartOf="@id/SingUpButton"
+        app:layout_constraintEnd_toEndOf="@id/SingUpButton"
+        android:layout_marginBottom="15dp"
+        style="@style/customOutlinedButton"
+        android:text="Sign In" />
+
+    <Button
+        android:id="@+id/SingUpButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        style="@style/customOutlinedButton"
+        android:text="Sign Up"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
