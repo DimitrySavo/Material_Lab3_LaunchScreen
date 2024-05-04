@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import com.google.android.material.textfield.TextInputEditText
 
 class AccountActivity : AppCompatActivity() {
@@ -59,6 +60,12 @@ class AccountActivity : AppCompatActivity() {
         exitButton.setOnClickListener {
             Intent(this@AccountActivity, MainActivity::class.java).also {
                 startActivity(it)
+            }
+        }
+
+        accountEmailTB.addTextChangedListener {
+            if (globalFunctions.checkEmail(it.toString())) {
+                accountEmailTB.error = "Email not correct"
             }
         }
 

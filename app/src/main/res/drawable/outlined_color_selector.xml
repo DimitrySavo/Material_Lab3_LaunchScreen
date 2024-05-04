@@ -4,5 +4,5 @@
     <item android:state_focused="true" android:color="@color/textBlue"/>
 
 <!--    Normal-->
-    <item android:color="@color/outlineBlue"/>
+    <item android:color="@color/textBlue"/>
 </selector>

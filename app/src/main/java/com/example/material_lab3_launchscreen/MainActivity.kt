@@ -33,6 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         signInButton.setOnClickListener {
             Intent(this@MainActivity, AccountActivity::class.java).also {
+                if (globalFunctions.checkEmail(emailTV.text.toString())) {
+                    emailTV.error = "Email incorrect"
+                    return@also
+                }
+
+                if (globalFunctions.checkPasswordLength(passwordTV.text.toString())) {
+                    passwordTV.error = "Password should be more than 8 symbols"
+                    return@also
+                }
+
                 it.putExtra("email", emailTV.text.toString())
                 it.putExtra("password", passwordTV.text.toString())
                 startActivity(it)
@@ -40,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         signUpButton.setOnClickListener {
-            val intent = Intent(this@MainActivity, RegistrationActivity::class.java).also {
+            Intent(this@MainActivity, RegistrationActivity::class.java).also {
                 startActivity(it)
             }
         }

@@ -54,7 +54,7 @@
         <item name="boxStrokeColor">@drawable/outlined_color_selector</item>
         <item name="android:textColorHint">@color/textBlue</item>
         <item name="endIconMode">custom</item>
-        <item name="endIconDrawable">@drawable/ic_settings</item>
+        <item name="endIconDrawable">@drawable/ic_create</item>
     </style>
 
 </resources>

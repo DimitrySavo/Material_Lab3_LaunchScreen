@@ -43,13 +43,26 @@ class RegistrationActivity : AppCompatActivity() {
 
         singUpButton.setOnClickListener {
             Intent(this@RegistrationActivity, AccountActivity::class.java).also {
+
+                if (globalFunctions.checkEmail(emailRegistrationTB.text.toString())) {
+                    emailRegistrationTB.error = "Email incorrect"
+                    return@also
+                }
+
+                if (globalFunctions.checkPasswordLength(passwordRegistrationTB.text.toString())) {
+                    passwordRegistrationTB.error = "Password should be more than 8 symbols"
+                    return@also
+                }
+
                 if (passwordRegistrationTB.text.toString() == passwordRepeatRegistrationTB.text.toString()) {
                     it.putExtra("name", nameRegistrationTB.text.toString())
                     it.putExtra("email", emailRegistrationTB.text.toString())
                     it.putExtra("password", passwordRegistrationTB.text.toString())
                     startActivity(it)
                 } else {
-                    Toast.makeText(this, "Passwords should be equal", Toast.LENGTH_SHORT).show()
+                    passwordRegistrationTB.error = "Passwords isnt equal"
+                    passwordRepeatRegistrationTB.error = "Passwords isnt equal"
+                    return@also
                 }
             }
         }
